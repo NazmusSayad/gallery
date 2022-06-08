@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Amatic SC", cursive;
+  color: lightgoldenrodyellow;
+}
+
+#gallery {
+  display: flex;
+  width: 100%;
+
+  &.active:hover .imageContainer {
+    flex: 0;
+  }
+}
+
+.imageContainer {
+  cursor: pointer;
+  flex: 1;
+  transition: flex 1s cubic-bezier(0.95, -0.2, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    flex: 5 !important;
+
+    h1,
+    p {
+      transform: translateY(0);
+      transition-delay: 0.7s;
+    }
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+h1,
+p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+  padding: 1rem;
+  text-shadow: 0 0 10px #00000075;
+}
+
+h1 {
+  font-size: 3rem;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+p {
+  font-size: 1.5rem;
+  bottom: 0;
+  transform: translateY(100%);
+}
