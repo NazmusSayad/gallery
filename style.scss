@@ -30,7 +30,7 @@ body {
 
     h1,
     p {
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
       transition-delay: 0.7s;
     }
   }
@@ -56,11 +56,11 @@ p {
 h1 {
   font-size: 3rem;
   top: 0;
-  transform: translateY(-100%);
+  transform: translateY(-100%) scale(0);
 }
 
 p {
   font-size: 1.5rem;
   bottom: 0;
-  transform: translateY(100%);
+  transform: translateY(100%) scale(0);
 }
