@@ -31,13 +31,14 @@ body {
   overflow: hidden;
 
   &:hover {
-    flex: 5 !important;
-
     h1,
     p {
       transform: translateY(0) scale(1);
       transition-delay: 0.7s;
+      opacity: 1;
     }
+
+    flex: 5 !important;
   }
 }
 
@@ -56,7 +57,7 @@ p {
   transition: 0.5s;
   padding: 1rem;
   text-shadow: 0 0 10px #00000075;
-  opacity: 1;
+  opacity: 0;
 }
 
 h1 {
